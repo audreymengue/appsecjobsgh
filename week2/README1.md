@@ -3,7 +3,7 @@
 ## DES232 Migrating OWASP 2021 Injection
 An injection attack refers to a class of techniques in which an atacker manipulates an application through malicious input.
 
-### The course will focus on cross-site injection, SQL injection, OS command injections, code injection
+## The course will focus on cross-site injection, SQL injection, OS command injections, code injection
 
 * Cross-site scripting (XSS) Attackers will inject code into the web page that other people will view. The script will steal sensitive information from 
   sessions and cookies and redirect users to a site that has similar content but is malicious. Occurs when applications fail to filter user inputs and 
@@ -36,5 +36,38 @@ An injection attack refers to a class of techniques in which an atacker manipula
 	7. Iframe sandbox policies
 	8. Blocks eval, inline scripts, inline CSS, data URIs
 	9. Reports policy violations back to the server
+
 * SQL injections uses web application input to change the behavior of a query sent to the database.
 	. 1=1 always evaluates to true so the query will always return all records
+    . hyphens and semicolons are treated as comment so everything after that is ignored
+    To mitigate SQL injections:
+    1. Use parametarised queries
+    2. Parameterized stored procedures (Avoid dynamically concatinating user inputs and SQl statements, avoid sensitive system stored procedures)
+    3. Sparing use of deny lists
+    4. Exception handling
+    5. Minimal privileges
+    6. Harden OS and Platforms
+    7. Disable stacked queries
+    8. Avoid SELECT *
+    9. Use the LIMIT clause
+
+* OS command injection is a vulnerability that allows an attacker to execute arbitrary commands on a web, database, or backend server. Here is how to mitigate it:
+    1. Avoid the shell for commands
+    2. Careful input validation
+    3. Parameterization
+    4. Identify risky functions
+    5. Use command abstraction
+    6. Run web server with low privilege
+    7. File permission
+    8. Use full path
+    9. Run Web server in virtualized or sandbox environment
+
+* Code Injection is where the attacker targets the programming language and the code the application uses.
+    . This vulnerability is most common in interpreted scripting languages like python, PHP, Ruby, JS etc... 
+    . Still possible in compiled languages
+    . Vulnerability if using functions such as eval
+    To mitigate code injection:
+    1. Never evaluate code based on user inputs
+
+    
+
