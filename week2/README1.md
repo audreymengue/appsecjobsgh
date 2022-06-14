@@ -1,6 +1,6 @@
-# AWA 2
+# AWA 2 14-06-2022
 
-## DES232 Migrating OWASP 2021 Injection
+## DES232 Migrating OWASP 2021 Injection (14-06-2022)
 An injection attack refers to a class of techniques in which an atacker manipulates an application through malicious input.
 
 ## The course will focus on cross-site injection, SQL injection, OS command injections, code injection
@@ -68,6 +68,29 @@ An injection attack refers to a class of techniques in which an atacker manipula
     . Vulnerability if using functions such as eval
     To mitigate code injection:
     1. Never evaluate code based on user inputs
+
+## DES234 Mitgating OWASP 2021 cryptographic failure (14.06.2022)
+
+### Cryptography
+Can be hard to implement but very secure. Many liraries wwere  created to solve that problem.
+It's failure can resulte in exposure of sensitive data and then make the compnay loose their reputation.
+It was meant to achieave three goals: authenticity(guaranties the origine of the data), integrity(the data has not been modified) and confidentiality(discretion in viewing the data). Let's focus on confidentiality.
+
+* Confidentiality consists of securing the data at rest and in transit.
+Data at rest ca be encrypted using the following:
+	- Transparent disk encryption
+	- Database encryption
+	- Application level encryption
+	- Storing password hashes
+Selecting the strong algorythms (keylength.com for more information)
+Storing password (Hash function with password)
+Brute force attacks(best practice: strong algo, password policy, multi-factor authentication, use Salt and Pepper)
+Best to use a salt when storing passwords a salt is a long number added to the hashed password
+Pepper is a salt kept secret
+
+Data in transit(TLS is not SSL, Some of them interchangeably, SSL is insecur, use TLS v1.2 or less)
+
+
 
     
 
