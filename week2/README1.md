@@ -90,6 +90,21 @@ Pepper is a salt kept secret
 
 Data in transit(TLS is not SSL, Some of them interchangeably, SSL is insecur, use TLS v1.2 or less)
 
+### DES235 Mitigating OWASP 2021 Insecure Design 15-06-2022
+SSDLC makes sure that proper security control and safeguards become an important part of an application development.
+SSDLC consists of Analyze, Design, Deployment, Test, Deploy, Operate.
+- Secure design patterns they are the best metod to solve one specific problem or task examples include (Auhentication, security logging, cryptography)
+-Thread modeling is the process of identifying threats to software system design, understanding the risks created by the threats, understand the appropriate seurity cntrols to mitigate the risks. Conststs of 5 steps (Objectives, Overview, decompose, threats, weakness)
+- Quality assurance is the guarantee that there is no vulnerabilities in the code. consists of;
+	- Custom test cases: Unit, integration and system tests
+	- Static analysis: Tools that analyse common patterns that might lead to vulnerabilities in your code.Could be IDE ad-ins or stand alone tools.
+	- Vulnerability scanning: Automated ools that look for specific vulnerabilities
+	- Penetration testing: manual testing by security experts to emulate real world attacks 
+	- Fuzzing: Tools that monitor the application's behavior
+- Component isolation is very crutial to monitoring every aspect of an application consists of:;
+	- VM, Containers, Sandboxex, Process isolation, physical or virtual network, firewalls, gateways.
+- Resource consumption: anything that might have physical limits or other limitations imposed by the software or operating system like CPUs, RAM, Storage, Network capacity, file handles, network sockets, I/O operations
+	- There is a concept of resource exhaustion attacks. Resource consumption must be controlled. We can fight it by monitoring identity and excessive usage, performing input validation, improve efficiency, improve system scalability, throttle or block abusive users and improve recovery.
 
 
     
